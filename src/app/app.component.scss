@@ -1,0 +1,28 @@
+nav {
+    ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        float: right;
+        font-size: 18px;
+        li a {
+            cursor: pointer;
+            text-decoration: none;
+            color: black;
+            font-weight: 400;
+        }
+        li a:hover {
+            color: blueviolet;
+        }
+    }
+    height: 20px;
+    padding: 50px 150px;
+}
+
+.container {
+    margin-left: 10px;
+    margin-right: 10px;
+}

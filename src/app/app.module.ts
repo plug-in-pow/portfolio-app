@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { PortfolioDashboardModule } from './portfolio-dashboard/portfolio-dashboard.module';
@@ -10,6 +11,7 @@ import { PortfolioDashboardModule } from './portfolio-dashboard/portfolio-dashbo
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     PortfolioDashboardModule
   ],
   providers: [],

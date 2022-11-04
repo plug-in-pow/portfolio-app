@@ -4,8 +4,121 @@
     src: local("Poppins"), url(./assets/fonts/Poppins-Regular.ttf) format("truetype");
 }
 
+$base-color: rgb(54, 54, 231);
+$secondary-color: rgb(130, 60, 163);
+
 * {
     padding: 0;
     margin: 0;
     font-family: "Poppins", Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
+
+html {
+    font-size: 60%;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+#logo {
+    font-size: 2.5rem;
+    cursor: pointer;
+    #dot {
+        color: $base-color;
+        font-weight: bold;
+    }
+}
+
+a {
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 4rem 1rem;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 4rem;
+}
+
+.btn-contact {
+    text-align: center;
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    background-color: $base-color;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-contact:hover, .download-btn:hover {
+    filter: grayscale(50%);
+}
+
+.home-section {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    align-items: center;
+    .text-content {
+        padding: 0 4rem;
+        .text {
+            margin: 1rem 1rem;
+        }
+        .sub-text {
+            color: rgb(104, 102, 102);
+            font-weight: 100;
+        }
+        .download-btn {
+            padding: 1rem 2rem;
+            font-size: 1.5rem;
+            border-radius: 3rem;
+            border: none;
+            background-color: $base-color;
+            color: white;
+            cursor: pointer;
+            span {
+                padding-right: 0.5rem;
+            }
+        }
+        .icons {
+            .icon {
+                margin-right: 2rem;
+                padding: 1rem;
+                color: $secondary-color;
+                cursor: pointer;
+            }
+            .icon:hover {
+                filter: grayscale(50%);
+            }
+        }
+    }
+}
+
+img {
+    width: auto;
+    height: 400px;
+}
+
+

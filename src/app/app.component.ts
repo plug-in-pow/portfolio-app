@@ -8,16 +8,17 @@ import { Component } from '@angular/core';
   animations: [
     trigger('activeInactive', [
       state('active', style({
-        color: '#6E07F3',
+        color: 'rgb(54, 54, 231)',
+        borderBottom: '2px solid rgb(54, 54, 231)'
       })),
       state('inactive', style({
-        color: 'black',
+        color: 'rgb(165 164 164)',
       })),
       transition('active => inactive', [
-        animate('600ms ease')
+        animate('400ms ease')
       ]),
       transition('inactive => active', [
-        animate('600ms ease')
+        animate('400ms ease')
       ])
     ])
   ]
@@ -33,11 +34,12 @@ export class AppComponent {
   navbarItemClick(event: Event) : void {
     let clickedItem: string = (event.target as HTMLInputElement).innerHTML;
     this.navbarData.forEach(obj => {
-      if(obj.name === clickedItem) {
+      if(obj.name === clickedItem.trim()) {
         obj.status = "active";
       }else{
         obj.status = "inactive";
       }
-    })
+    });
+
   }
 }

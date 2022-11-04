@@ -1,12 +1,14 @@
 <header>
     <nav>
+        <span id="logo">Mayank <span id="dot">.</span></span>
         <ul class="navbar">
             <li *ngFor="let data of navbarData">
-                <a class="nav-links" href="#{{data.name.toLowerCase()}}" (click)="navbarItemClick($event)" [@activeInactive]="data.status">
+                <a class="nav-links" href="#" (click)="navbarItemClick($event)" [@activeInactive]="data.status">
                     {{data.name}}
                 </a>
             </li>
         </ul>
+        <button class="btn-contact">Contact Me</button>
     </nav>
 </header>
 

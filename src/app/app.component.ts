@@ -8,20 +8,16 @@ import { Component } from '@angular/core';
   animations: [
     trigger('activeInactive', [
       state('active', style({
-        background: 'blueviolet',
-        color: 'white',
-        boxShadow: 'rgb(223 0 255 / 25%) 0px 8px 24px'
+        color: '#6E07F3',
       })),
       state('inactive', style({
-        background: 'transparent',
         color: 'black',
-        boxShadow: 'none'
       })),
       transition('active => inactive', [
-        animate('200ms cubic-bezier(0.61, 1, 0.88, 1)')
+        animate('600ms ease')
       ]),
       transition('inactive => active', [
-        animate('200ms cubic-bezier(0.37, 0, 0.63, 1)')
+        animate('600ms ease')
       ])
     ])
   ]

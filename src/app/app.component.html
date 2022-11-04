@@ -2,7 +2,9 @@
     <nav>
         <ul class="navbar">
             <li *ngFor="let data of navbarData">
-                <a href="#" (click)="navbarItemClick($event)" [@activeInactive]="data.status">{{data.name}}</a>
+                <a class="nav-links" href="#{{data.name.toLowerCase()}}" (click)="navbarItemClick($event)" [@activeInactive]="data.status">
+                    {{data.name}}
+                </a>
             </li>
         </ul>
     </nav>

@@ -15,7 +15,8 @@ $secondary-color: rgb(130, 60, 163);
 }
 
 html {
-    font-size: 60%;
+    font-size: 75%;
+    height: 500vh;
 }
 
 h1 {
@@ -48,11 +49,18 @@ li {
     list-style: none;
 }
 
+header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+}
+
 nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 4rem 1rem;
+    padding: 2.5rem 1rem;
 }
 
 ul {
@@ -64,6 +72,7 @@ ul {
 
 .btn-contact {
     text-align: center;
+    font-size: 1.25rem;
     padding: 1rem 2rem;
     border-radius: 3rem;
     background-color: $base-color;
@@ -78,9 +87,22 @@ ul {
 
 .home-section {
     display: flex;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    padding-bottom: 8rem;
+    min-height: 85vh;
+    .icons {
+        display: flex;
+        flex-direction: column;
+        .icon {
+            font-size: 2.5rem;
+            padding: 1rem;
+        }
+        .icon:hover {
+            color: $base-color;
+        }
+    }
     .text-content {
         padding: 0 4rem;
         .text {
@@ -91,6 +113,10 @@ ul {
             font-weight: 100;
         }
         .download-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
             padding: 1rem 2rem;
             font-size: 1.5rem;
             border-radius: 3rem;
@@ -98,19 +124,8 @@ ul {
             background-color: $base-color;
             color: white;
             cursor: pointer;
-            span {
-                padding-right: 0.5rem;
-            }
-        }
-        .icons {
-            .icon {
-                margin-right: 2rem;
-                padding: 1rem;
-                color: $secondary-color;
-                cursor: pointer;
-            }
-            .icon:hover {
-                filter: grayscale(50%);
+            i {
+                font-size: 2.5rem;
             }
         }
     }
@@ -118,7 +133,51 @@ ul {
 
 img {
     width: auto;
-    height: 400px;
+    height: 500px;
+    padding: 4rem 0;
 }
 
+.about-title {
+    text-align: center;
+}
 
+.about-div {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+}
+
+.about-header {
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+    float: left;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+.about-text-container {
+    max-width: 500px;
+    padding: 2rem 0;
+    .blocks {
+        display: flex;
+        justify-content: space-around;
+        .block {
+            margin: 1.5rem 0;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            p {
+                font-size: 1.25rem;
+                font-weight: 100;
+            }
+        }
+    }
+}
+
+.about-image {
+    height: 360px;
+}

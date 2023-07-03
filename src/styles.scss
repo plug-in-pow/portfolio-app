@@ -4,8 +4,7 @@
     src: local("Poppins"), url(./assets/fonts/Poppins-Regular.ttf) format("truetype");
 }
 
-$base-color: rgb(54, 54, 231);
-$secondary-color: rgb(130, 60, 163);
+$base-color: #44efff;
 
 * {
     padding: 0;
@@ -17,10 +16,12 @@ $secondary-color: rgb(130, 60, 163);
 html {
     font-size: 62.5%;
     height: 500vh;
+    background-color: #0f172a;
+    color: white;
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 6rem;
 }
 
 h2 {
@@ -41,7 +42,7 @@ h3 {
 }
 
 a {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     text-decoration: none;
 }
 
@@ -52,8 +53,7 @@ li {
 header {
     position: sticky;
     top: 0;
-    background-color: white;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+    background-color: #0f172a;
 }
 
 nav {
@@ -72,10 +72,10 @@ ul {
 
 .btn-contact {
     text-align: center;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     padding: 1rem 2rem;
     border-radius: 3rem;
-    background-color: $base-color;
+    background-color: #172f57;
     color: white;
     cursor: pointer;
     border: none;
@@ -98,6 +98,7 @@ ul {
         .icon {
             font-size: 2.5rem;
             padding: 1rem;
+            color: white;
         }
         .icon:hover {
             color: $base-color;
@@ -109,7 +110,7 @@ ul {
             margin: 1rem 1rem;
         }
         .sub-text {
-            color: rgb(104, 102, 102);
+            color: rgb(211, 211, 211);
             font-weight: 100;
         }
         .download-btn {
@@ -122,7 +123,6 @@ ul {
             border-radius: 3rem;
             border: none;
             background-color: $base-color;
-            color: white;
             cursor: pointer;
             i {
                 font-size: 2.5rem;
@@ -133,20 +133,21 @@ ul {
 
 img {
     width: auto;
-    height: 500px;
+    height: 600px;
     padding: 4rem 0;
 }
 
 .about-title {
-    text-align: center;
+    color: $base-color;
+    font-weight: 100;
 }
 
 .about-div {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
+    align-items: flex-end;
     flex-wrap: wrap-reverse;
+    min-height: 90vh;
 }
 
 .about-header {
@@ -161,10 +162,17 @@ p {
 
 .about-text-container {
     max-width: 500px;
-    padding: 2rem 0;
+    padding: 4rem;
+    border-radius: 2rem;
+    background-color: #172f57;
     .blocks {
         display: flex;
         justify-content: space-around;
+        .block:nth-child(2) {
+            border-left: 1px solid #ffffff;
+            border-right: 1px solid #ffffff;
+            padding: 0 2rem;
+        }
         .block {
             margin: 1.5rem 0;
             text-align: center;
@@ -179,5 +187,35 @@ p {
 }
 
 .about-image {
-    height: 360px;
+    height: 500px;
+}
+
+.custom-hr {
+    border: 1px solid #172f57;
+}
+
+.skill-title {
+    text-align: center;
+    font-weight: 100;
+    color: $base-color;
+}
+
+.skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    gap: 3rem;
+    .skill {
+        color: #85adf3;
+        height: min-content;
+        font-size: 4rem;
+        text-align: center;
+        border-radius: 2rem;
+        padding: 3%;
+        .skill-name {
+            padding-top: 2rem;
+            font-weight: 100;
+        }
+    }
 }

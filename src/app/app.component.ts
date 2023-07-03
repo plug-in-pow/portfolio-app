@@ -8,11 +8,11 @@ import { Component } from '@angular/core';
   animations: [
     trigger('activeInactive', [
       state('active', style({
-        color: 'rgb(54, 54, 231)',
-        borderBottom: '2px solid rgb(54, 54, 231)'
+        color: 'white',
+        borderBottom: '2px solid #80ff44'
       })),
       state('inactive', style({
-        color: 'rgb(165 164 164)',
+        color: 'white',
       })),
       transition('active => inactive', [
         animate('400ms ease')
@@ -26,8 +26,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   navbarData: any[] = [
     { "name": "Home", "status": "active" },
-    { "name": "About", "status": "inactive" },
-    { "name": "Skills", "status": "inactive" },
+    { "name": "About Me", "status": "inactive" },
     { "name": "Projects", "status": "inactive" },
   ];
 

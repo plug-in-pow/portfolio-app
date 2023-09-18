@@ -1,22 +1,22 @@
 <div class="main">
     <nav>
-        <h2 class="site-title">portfolio .</h2>
+        <h2 class="site-title">{{title}}</h2>
     </nav>
     <div class="container">
         <div class="left-section">
-            <h1 class="title">Mayank Tripathi</h1>
-            <div>Software Engineer</div>
+            <h1 class="title">{{name}}</h1>
+            <div>{{position}}</div>
             <br>
-            <p>I am enthusiastic about implementing and launching new projects. Capability to translate business needs into technical solutions. Looking for advancing my career as an software engineer with a reputable technology-driven organization.</p>
+            <p>{{description}}</p>
             <br>
             <div class="links">
-                <a class="link-anchor" href="https://github.com/plug-in-pow" target="_blank">
+                <a class="link-anchor" href="{{links.git}}" target="_blank">
                     <i class="fa-brands fa-github" title="Github"></i>
                 </a>
-                <a class="link-anchor" href="https://www.linkedin.com/in/mayank-tripathi-2021/" target="_blank">
+                <a class="link-anchor" href="{{links.linkedin}}" target="_blank">
                     <i class="fa-brands fa-linkedin" title="Linkedin"></i>
                 </a>
-                <a class="link-anchor" href="https://leetcode.com/tripathimayank36/" target="_blank">
+                <a class="link-anchor" href="{{links.leetcode}}" target="_blank">
                     <i class="fa-solid fa-code" title="Leetcode"></i>
                 </a>
             </div>
@@ -33,8 +33,8 @@
             </div>
             <br>
             <button type="button" class="btn">
-                <a href="https://drive.google.com/file/d/1gXcJ6fUf59r78jKR0jdF-_dK6qY5QGsn/view?usp=sharing" target="_blank">
-                    <i class="fa-solid fa-arrow-down"></i>
+                <a href="{{links.resume}}" target="_blank">
+                    <i class="fa-regular fa-share-from-square"></i>
                     &nbsp;
                     Resume
                 </a>
@@ -68,26 +68,16 @@
                 <div class="sub-section-title">Projects</div>
                 <br>
                 <div class="project-list">
-                    <div class="card">
-                        <div class="card-title">Info Rail</div>
-                        <div class="card-desc">Users can search and find information on trains through the info rail website, including their timing, coaches, and route.</div>
+                    <div class="card" *ngFor="let project of projects">
+                        <div class="card-title">{{project.title}}</div>
+                        <div class="card-desc">{{project.description}}</div>
                         <hr>
                         <div class="url">
-                            <a href="https://info-rail.netlify.app/" target="_blank">
+                            <a *ngIf="project.website" href="{{project.website}}" target="_blank">
                                 <i class="fa-solid fa-link"></i> Link
                             </a>
-                            &nbsp;&nbsp;
-                            <a href="https://github.com/plug-in-pow/info-rail" target="_blank">
-                                <i class="fa-solid fa-code-branch"></i> Github
-                            </a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-title">Work on</div>
-                        <div class="card-desc">Individuals can organize their daily tasks by keeping a To-Do list using the work-on webpage. We also offer a calendar view for weekly planning.</div>
-                        <hr>
-                        <div class="url">
-                            <a href="https://github.com/plug-in-pow/work-on" target="_blank">
+                            <span *ngIf="project.website">&nbsp;&nbsp;</span>
+                            <a href="{{project.git}}" target="_blank">
                                 <i class="fa-solid fa-code-branch"></i> Github
                             </a>
                         </div>

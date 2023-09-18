@@ -86,6 +86,9 @@
     }
     .url {
         cursor: pointer;
+        span {
+            background: transparent;
+        }
     }
     .card:nth-child(1), .card:nth-child(1) > * {
         color: black;

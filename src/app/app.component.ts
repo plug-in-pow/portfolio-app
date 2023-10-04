@@ -15,7 +15,7 @@ export class AppComponent {
     git: 'https://github.com/plug-in-pow',
     linkedin: 'https://www.linkedin.com/in/mayank-tripathi-2021/',
     leetcode: 'https://leetcode.com/tripathimayank36/',
-    resume: 'https://drive.google.com/file/d/1gXcJ6fUf59r78jKR0jdF-_dK6qY5QGsn/view?usp=sharing'
+    resume: 'https://drive.google.com/drive/folders/1A9ozm1Q2rOtG-vY-ERFYys1hqD_7mozG?usp=sharing'
   }
   projects: any[] = [
     {
